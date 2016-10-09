@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <Target Name="TargetA">
+        <Message Text="This is Target A" Importance="normal"/>
+        <CallTarget Targets="TargetB;TargetC" />
+    </Target>
+    <Target Name="TargetB" Condition="$(Platform) == 'ios'">
+        <Message Text="This is Target B" Importance="normal"/>
+    </Target>
+    <Target Name="TargetC" Condition="$(Platform) == 'Android'">
+        <Message Text="this is Target C" Importance="normal"/>
+    </Target>
+</Project>
