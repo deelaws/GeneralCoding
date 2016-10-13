@@ -14,12 +14,20 @@ namespace TestProject
 	{
 	public:
 
-		TEST_METHOD(FirstOccurenceOfK_Tests)
+		TEST_METHOD(FirstOccurenceOfK_Test)
 		{
 			std::vector<int> vec;
 			vec.emplace_back(-10);
 			vec.emplace_back(-3);
 			vec.emplace_back(2);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
+			vec.emplace_back(5);
 			vec.emplace_back(5);
 			vec.emplace_back(5);
 			vec.emplace_back(10);
@@ -28,6 +36,21 @@ namespace TestProject
 			int first_occurence = FindFirstOccurenceOfk(vec, 5);
 
 			Assert::AreEqual(true, first_occurence == 3);
+		}
+
+		TEST_METHOD(SearchEntryEqualToIndex_Test)
+		{
+			std::vector<int> vec;
+			vec.emplace_back(-2);
+			vec.emplace_back(0);
+			vec.emplace_back(2);
+			vec.emplace_back(3);
+			vec.emplace_back(7);
+			vec.emplace_back(9);
+
+			int first_occurence = SearchEntryEqualToIndex(vec);
+
+			Assert::AreEqual(true, first_occurence == 2 || first_occurence == 3);
 		}
 	};
 }
