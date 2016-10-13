@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApp", "ConsoleApp\ConsoleApp.vcxproj", "{82FCC394-58FD-444F-A2D9-E8240D3E2D65}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructures", "DataStructures\DataStructures.vcxproj", "{250B7FF9-145D-4BC8-A8E4-90FB2B7B4237}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HttpLibrary", "HttpLibrary\HttpLibrary.vcxproj", "{73584C1B-9E05-4798-BB85-FCE8D8FD4EF8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithms", "Algorithms\Algorithms.vcxproj", "{574BF576-42DA-4025-B37E-C76B5013582E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,16 @@ Global
 		{73584C1B-9E05-4798-BB85-FCE8D8FD4EF8}.Release|Win32.ActiveCfg = Release|Win32
 		{73584C1B-9E05-4798-BB85-FCE8D8FD4EF8}.Release|Win32.Build.0 = Release|Win32
 		{73584C1B-9E05-4798-BB85-FCE8D8FD4EF8}.Release|x64.ActiveCfg = Release|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Debug|ARM.ActiveCfg = Debug|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Debug|Win32.Build.0 = Debug|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Debug|x64.ActiveCfg = Debug|x64
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Debug|x64.Build.0 = Debug|x64
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Release|ARM.ActiveCfg = Release|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Release|Win32.ActiveCfg = Release|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Release|Win32.Build.0 = Release|Win32
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Release|x64.ActiveCfg = Release|x64
+		{574BF576-42DA-4025-B37E-C76B5013582E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
