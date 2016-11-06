@@ -53,3 +53,55 @@ int SearchEntryEqualToIndex(const std::vector<int> input)
 
 	return retval;
 }
+
+std::pair<int, int> FindSumSubArray(const std::vector<int> &A,
+	const int k)
+{
+	int curr_sum = 0;
+	int start_index = 0;
+
+	for (size_t i = 0; i < A.size(); i++)
+	{
+		curr_sum += A[i];
+
+		while (curr_sum > k)
+		{
+			curr_sum -= A[start_index++];
+		}
+
+		if (k == curr_sum)
+		{
+			return { start_index, (int)i };
+		}
+	}
+
+	return{ -1,-1 };
+}
+
+std::pair<int, int> FindSumSubArrayWithNegative(const std::vector<int> &A,
+	const int k)
+{
+	int curr_sum = 0;
+	std::unordered_map<int, int> map;
+
+	for (size_t i = 0; i < A.size(); i++)
+	{
+		curr_sum += A[i];
+
+		// Found sum from index 0 to i.
+		if (k == curr_sum)
+		{
+			return{ 0, i };
+		}
+
+		if (map.find(curr_sum - k) != map.end())
+		{
+			// found an index such that the sum  at that index my now = k
+			return{ map[curr_sum - k] + 1, i };
+		}
+
+		map[curr_sum] = i;
+	}
+
+	return{ -1,-1 };
+}

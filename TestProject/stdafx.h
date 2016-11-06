@@ -7,6 +7,8 @@
 
 #include "targetver.h"
 
+#include "Windows.h"
+
 // Headers for CppUnitTest
 #include "CppUnitTest.h"
 

@@ -12,10 +12,6 @@
 #include <stdlib.h>
 #include <tchar.h>
 
-#include "StringUtils.h"
-
-#include "SharedTypes.h"
-#include "LinkedList.h"
-#include "BinaryTree.h"
 
 #include "HttpRequest.h"
+#include "Algorithm.h"

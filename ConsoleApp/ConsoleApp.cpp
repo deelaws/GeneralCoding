@@ -4,12 +4,8 @@
 #include "stdafx.h"
 #include <algorithm>
 #include <functional>
-
-
 #include <memory>
 
-
-using namespace DataStructs;
 using namespace std;
 
 
@@ -131,11 +127,9 @@ void foo(std::function<int( int, int)>  myfunc)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-    vector<int> numbers = { 1, 2, 3, 4, 5,6,7 };
-    int extra = 5;
-    auto myfunc = [=](int a, int b)->int{return a + b + extra; };
-     foo(myfunc );
-     
+	std::vector<int> a = {1,2,5,-1,6,7,9};
+
+	auto ret = FindSumSubArrayWithNegative(a, 4);
 
 	return 0;
 }
