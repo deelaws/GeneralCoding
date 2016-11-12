@@ -106,5 +106,24 @@ namespace TestProject
 			Assert::AreEqual(2, ret.first);
 			Assert::AreEqual(3, ret.second);
 		}
+
+        TEST_METHOD(SortedRoatedArray_simple)
+        {
+            std::vector<int> a = { 7,8,9,10,1,2,3,4,5,6};
+
+            auto ret = SearchedSortedRotatedArray(a, 8);
+
+            Assert::AreEqual(1, ret);
+        }
+
+        TEST_METHOD(SortedRoatedArray_fully_sorted_array)
+        {
+            // keep the array fully sorted
+            std::vector<int> a = { 1,2,3,4,5,6,7,8,9,10 };
+
+            auto ret = SearchedSortedRotatedArray(a, 8);
+
+            Assert::AreEqual(7, ret);
+        }
 	};
 }

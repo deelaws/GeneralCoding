@@ -1,5 +1,13 @@
 #include "stdafx.h"
 
+#if defined(max)
+    #undef max
+#endif
+
+#if defined(min)
+    #undef min
+#endif
+
 int FindFirstOccurenceOfk(const std::vector<int> input, int k)
 {
 	int retval = -1;
@@ -104,4 +112,105 @@ std::pair<int, int> FindSumSubArrayWithNegative(const std::vector<int> &A,
 	}
 
 	return{ -1,-1 };
+}
+
+static inline void swap(std::vector<int> & A, int i, int j)
+{
+	int temp = A[i];
+	A[i] = A[j];
+	A[j] = temp;
+}
+
+void ZigZag(std::vector<int> & A)
+{
+	bool greater = true;
+
+	for (size_t i = 0; i < A.size() - 1; i++)
+	{
+		if (A[i] >= A[i + 1] && greater)
+		{
+			swap(A, i, i + 1);
+		}
+		else if (A[i] <= A[i + 1] && !greater)
+		{
+			swap(A, i, i + 1);
+		}
+
+		greater = !greater;
+	}
+}
+
+
+int StocksMaxProfit(std::vector<int>& A)
+{
+    int max_profit = 0;
+    int min_price = -1;
+
+    for (auto i : A)
+    {
+        min_price = std::min(min_price, i);
+        max_profit = std::max(i - min_price, max_profit);
+    }
+
+    return max_profit;
+}
+
+int SearchedSortedRotatedArray(std::vector<int>& A, int i)
+{
+    int ret = -1;
+    int mid;
+    int left = 0;
+    int right = A.size() - 1;
+
+    while (left < right)
+    {
+        mid = left + ((right - left) / 2);
+
+        if (A[mid] == i)
+        {
+            return mid;
+        }
+        else if ((A[mid] < i) && (i < A[right]))
+        {
+            left = mid + 1;
+        }
+        else
+        {
+            right = mid - 1;
+        }
+    }
+
+    return ret;
+}
+
+std::pair<int,int> FindSumOfPairClosest(std::vector<int>& A, int x)
+{
+    std::pair<int, int> ret = { -1,-1 };
+
+    int diff = std::numeric_limits<int>::max();
+
+    int right = A.size()-1;
+    int left = 0;
+
+    while (left < right)
+    {
+        auto new_diff = std::abs(x - (A[left] + A[right]));
+
+        if (new_diff < diff)
+        {
+            // These two elements add up to be closer to x
+            ret = { A[left], A[right] };
+        }
+
+        if (A[left] + A[right] > x)
+        {
+            right--;
+        }
+        else
+        {
+            left++;
+        }
+    }
+
+    return ret;
 }

@@ -46,3 +46,38 @@ Input array can contain negative numbers.
 */
 std::pair<int, int> FindSumSubArrayWithNegative(const std::vector<int> &A,
 	const int k);
+
+/*
+Convert  the input array to zig zag format
+
+a < b > c < d > e < f > g
+*/
+void ZigZag(std::vector<int> & A);
+
+/*
+You're allowed to buy and sell a stock once.
+You have to buy before you sell.
+
+Find the maximum profit to be made for a stock with a 
+given prices over a bunch of days.
+*/
+int StocksMaxProfit(std::vector<int>& A);
+
+/*
+Search for an element in a sorted array which is
+rotated.
+
+1 2 3 4 5 might become 3 4 5 1 2
+
+*/
+int SearchedSortedRotatedArray(std::vector<int>& A, int i);
+
+/*
+Given a sorted array and a number x,
+find a pair in array whose sum is closest to x.
+*/
+std::pair<int, int> FindSumOfPairClosest(std::vector<int>& A, int x);
+
+/*
+ TODO: Find triplets in array which add up to x.
+*/

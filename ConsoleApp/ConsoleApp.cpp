@@ -125,11 +125,32 @@ void foo(std::function<int( int, int)>  myfunc)
     printf("%d", myfunc(1, 2));
 }
 
+std::string ArrayToString(std::vector<int>& A)
+{
+	std::string ret = "{";
+
+	for (size_t i = 0; i < A.size(); i++)
+	{
+		ret += " ";
+		ret += std::to_string(A[i]);
+		if (i != (A.size() - 1))
+		{
+			ret += ",";
+		}
+	}
+
+	ret += "}";
+
+	return ret;
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::vector<int> a = {1,2,5,-1,6,7,9};
+	std::vector<int> a = {4, 3, 7, 8, 6, 2, 1};
 
-	auto ret = FindSumSubArrayWithNegative(a, 4);
+	ZigZag(a);
+	
+	printf("%s\n", ArrayToString(a).c_str());
 
 	return 0;
 }
