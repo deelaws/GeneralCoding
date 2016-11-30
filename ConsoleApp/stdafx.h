@@ -11,7 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <tchar.h>
-
+#include <map>
 
 #include "HttpRequest.h"
 #include "Algorithm.h"
+#include "LRUCache.h"
