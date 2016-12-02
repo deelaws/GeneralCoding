@@ -278,7 +278,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	lru.Put(2, "two");
 	lru.Put(3, "three");
 	lru.Put(4, "four");
-	lru.Put(5, "five");
+
+	lru.PrintLRUCache();
+
+	auto ret = lru.Remove(1);
+	lru.Remove(2);
+	lru.Remove(3);
+	lru.Remove(4);
+
+	lru.PrintLRUCache();
+
+	lru.Put(1, "one");
+	lru.Put(2, "two");
+	lru.Put(3, "three");
+	lru.Put(4, "four");
 
 	lru.PrintLRUCache();
 
