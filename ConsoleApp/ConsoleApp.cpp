@@ -190,73 +190,6 @@ int func(int i)
 }
 
 
-struct LinkedListNode
-{
-    int val;
-    LinkedListNode *next;
-};
-
-void InsertLinkedList(LinkedListNode **front, int value)
-{
-    LinkedListNode *temp = *front;
-    LinkedListNode *new_node = new LinkedListNode({ value, NULL });
-    new_node->next = temp;
-    *front = new_node;
-}
-
-void PrintLinkedList(LinkedListNode *front)
-{
-    while (front != NULL)
-    {
-        printf("Node Value = '%d'\n", front->val);
-        front = front->next;
-    }
-}
-
-void ReverseLinkedList(LinkedListNode **front)
-{
-    LinkedListNode *curr = *front;
-    LinkedListNode *new_front = NULL;
-    LinkedListNode *temp = NULL;
-    
-    while (curr != NULL)
-    {
-        temp = curr;
-        curr = curr->next;
-        temp->next = new_front;
-        new_front = temp;
-    }
-
-    *front = new_front;
-}
-
-
-void DeleteNode(LinkedListNode **front, int value)
-{
-    LinkedListNode *prev = NULL;
-    LinkedListNode *curr = *front;
-    while (curr)
-    {
-        if (value == curr->val)
-        {
-            if (prev == NULL)
-            {
-                *front = curr->next;
-                // First Node in the linked list
-                delete curr;
-            }
-            else
-            {
-                curr = curr->next;
-                prev->next = curr;
-            }
-        }
-
-        prev = curr;
-        curr = curr->next;
-    }
-}
-
 
 typedef void(*PFUNC) (void *p);
 
@@ -273,27 +206,12 @@ void my_function(PFUNC pfc)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	LRUCache lru(4);
-	lru.Put(1, "one");
-	lru.Put(2, "two");
-	lru.Put(3, "three");
-	lru.Put(4, "four");
+	std::string num_one = "11";
+	std::string num_two = "11";
 
-	lru.PrintLRUCache();
+	auto ret = AddBinaryNumbers(num_one, num_two);
 
-	auto ret = lru.Remove(1);
-	lru.Remove(2);
-	lru.Remove(3);
-	lru.Remove(4);
-
-	lru.PrintLRUCache();
-
-	lru.Put(1, "one");
-	lru.Put(2, "two");
-	lru.Put(3, "three");
-	lru.Put(4, "four");
-
-	lru.PrintLRUCache();
+	printf("%s\n", ret.c_str());
 
     return 0;
 }

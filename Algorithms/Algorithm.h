@@ -81,3 +81,14 @@ std::pair<int, int> FindSumOfPairClosest(std::vector<int>& A, int x);
 /*
  TODO: Find triplets in array which add up to x.
 */
+
+/*
+Convert Binary Number in string format to decimal number.
+AKA, Binary to Decimal.
+*/
+
+/*
+Add two binary numbers in string format.
+Return the added binary number in string format.
+*/
+std::string AddBinaryNumbers(std::string a, std::string b);

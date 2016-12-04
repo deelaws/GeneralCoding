@@ -125,5 +125,31 @@ namespace TestProject
 
             Assert::AreEqual(7, ret);
         }
+
+		TEST_METHOD(AddBinaryNumbers_UT)
+		{
+			std::string num_one = "000";
+			std::string num_two = "111";
+
+			auto ret = AddBinaryNumbers(num_one, num_two);
+
+			Assert::AreEqual(ret.compare("111") == 0, true);
+
+			// 1 + 1
+			num_one = "1";
+			num_two = "1";
+
+			ret = AddBinaryNumbers(num_one, num_two);
+
+			Assert::AreEqual(ret.compare("10") == 0, true);
+
+			// 3 + 3 = 6
+			num_one = "11";
+			num_two = "11";
+
+			ret = AddBinaryNumbers(num_one, num_two);
+
+			Assert::AreEqual(ret.compare("110") == 0, true);
+		}
 	};
 }
