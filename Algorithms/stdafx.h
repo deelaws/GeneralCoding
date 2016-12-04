@@ -16,5 +16,7 @@
 #include <algorithm>
 #include <map>
 #include <unordered_map>
+#include <vector>
+#include "Graph.h"
 #include "Algorithm.h"
 #include "LRUCache.h"

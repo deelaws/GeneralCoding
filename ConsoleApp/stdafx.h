@@ -12,7 +12,9 @@
 #include <stdlib.h>
 #include <tchar.h>
 #include <map>
+#include <vector>
 
+#include "Graph.h"
 #include "HttpRequest.h"
 #include "Algorithm.h"
 #include "LRUCache.h"
