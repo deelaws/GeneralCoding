@@ -134,12 +134,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm.h" />
+    <ClInclude Include="GraphAlgorithm.h" />
     <ClInclude Include="LRUCache.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="array.cpp" />
+    <ClCompile Include="graphalgorithm.cpp" />
     <ClCompile Include="LRUCache.cpp" />
     <ClCompile Include="matrix.cpp" />
     <ClCompile Include="recursion.cpp" />

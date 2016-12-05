@@ -204,14 +204,39 @@ void my_function(PFUNC pfc)
     pfc(NULL);
 }
 
+
+Graph CreateDirectedGraph()
+{
+	// Creates a graph with vertices [0..8] 
+	Graph g(8);
+
+	// Add edges.
+	g.AddEdge(0, 1, 1);
+	g.AddEdge(0, 4, 2);
+	g.AddEdge(0, 8, 9);
+
+	g.AddEdge(1, 2, 1);
+	g.AddEdge(2, 3, 1);
+	
+	g.AddEdge(3, 7, 5);
+
+	g.AddEdge(4, 3, 4);
+	g.AddEdge(4, 5, 1);
+	
+	g.AddEdge(5, 7, 1);
+	g.AddEdge(8, 7, 1);
+
+	return g;
+}
+
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::string num_one = "11";
-	std::string num_two = "11";
+	auto grph = CreateDirectedGraph();
 
-	auto ret = AddBinaryNumbers(num_one, num_two);
+	grph.PrintGraph();
 
-	printf("%s\n", ret.c_str());
+	auto ret = DijkstraFindShortestPath(grph, 0, 7);
+	
 
     return 0;
 }

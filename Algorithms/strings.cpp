@@ -86,3 +86,17 @@ std::string AddBinaryNumbers(std::string a, std::string b)
 
 	return added;
 }
+
+int BinaryToDecimal(const std::string &num)
+{
+	int ret = 0;
+
+	int index = 0;
+	while (index < num.size())
+	{
+		ret <<= 1;
+		ret |= (num[index++] == '1') ? 0x1 : 0;
+	}
+
+	return ret;
+}

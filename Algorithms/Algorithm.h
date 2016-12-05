@@ -86,6 +86,7 @@ std::pair<int, int> FindSumOfPairClosest(std::vector<int>& A, int x);
 Convert Binary Number in string format to decimal number.
 AKA, Binary to Decimal.
 */
+int BinaryToDecimal(const std::string &num);
 
 /*
 Add two binary numbers in string format.

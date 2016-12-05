@@ -18,5 +18,17 @@
 #include <unordered_map>
 #include <vector>
 #include "Graph.h"
+
+#if defined max
+#undef max
+#endif
+
+#if defined min
+#undef min
+#endif
+
 #include "Algorithm.h"
 #include "LRUCache.h"
+#include "GraphAlgorithm.h"
+
+

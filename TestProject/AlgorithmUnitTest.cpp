@@ -151,5 +151,28 @@ namespace TestProject
 
 			Assert::AreEqual(ret.compare("110") == 0, true);
 		}
+
+		TEST_METHOD(BinaryToDecimal_UT)
+		{
+			std::string binary_num = "1000";
+			auto ret = BinaryToDecimal(binary_num);
+			Assert::AreEqual(ret, 8);
+
+			binary_num = "110";
+			ret = BinaryToDecimal(binary_num);
+			Assert::AreEqual(ret, 6);
+
+			binary_num = "101";
+		    ret = BinaryToDecimal(binary_num);
+			Assert::AreEqual(ret, 5);
+		
+			binary_num = "1";
+			ret = BinaryToDecimal(binary_num);
+			Assert::AreEqual(ret, 1);
+
+			binary_num = "0";
+			ret = BinaryToDecimal(binary_num);
+			Assert::AreEqual(ret, 0);
+		}
 	};
 }

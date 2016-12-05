@@ -18,3 +18,4 @@
 #include "HttpRequest.h"
 #include "Algorithm.h"
 #include "LRUCache.h"
+#include "GraphAlgorithm.h"
