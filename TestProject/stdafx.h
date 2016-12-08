@@ -13,7 +13,10 @@
 #include "CppUnitTest.h"
 
 // TODO: reference additional headers your program requires here
+#include <vector>
 
+#include "Graph.h"
+#include "GraphAlgorithm.h"
 #include "LinkedList.h"
 #include "BinaryTree.h"
 #include "Algorithm.h"
